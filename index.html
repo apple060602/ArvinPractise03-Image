@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container{
+        width: 500px;
+        height: 300px;
+        position: relative;
+    }
+    .imgBox{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .img01{
+        filter:grayscale(100%);
+    }
+    .img02{
+        width: 0;
+        /* 超過0隱藏 */
+        overflow: hidden;
+        transition: .5s;
+        border-right: 2px solid wheat; 
+    }
+    .container:hover .img02{
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="imgBox img01"><img src="https://picsum.photos/500/300/?random=1"></div>
+        <div class="imgBox img02"><img src="https://picsum.photos/500/300/?random=1"></div>
+    </div>
+</body>
+</html>
